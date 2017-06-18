@@ -4,7 +4,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 # Data structures
 
 * [Binary Search Tree (BST)](https://github.com/MantasMiksys/algorithms/blob/master/bst.h)
-* Heap
+* [Heap](https://github.com/MantasMiksys/algorithms/blob/master/heap.h)
 * Interval Tree
 * Stack
 * Queue
