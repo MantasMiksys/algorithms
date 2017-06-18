@@ -1,5 +1,5 @@
 # Algorithms
-Implementation of standard algorthms and data structures in C++
+Implementation of standard algorthms and data structures in C++. Based on Algorithms, Fourth Edition by Robert Sedgewick and Kevin Wayne.
 
 # Data structures
 
