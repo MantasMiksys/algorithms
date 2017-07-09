@@ -1,35 +1,96 @@
 #include <vector>
-#include <set>
-#include <limits.h>
+#include <iostream>
+#include <limits>
+#include <queue>
+#include <list>
+#include <utility>
+
 
 using namespace std;
 
-struct edge { int to, length; };
-    
-int dijkstra(const vector< vector<edge> > &graph, int source, int target) {
-    vector<int> min_distance( graph.size(), INT_MAX );
-    min_distance[ source ] = 0;
-	// elements in a set are sorted and set is implemented using 
-	// a red-black tree
-    set< pair<int,int> > active_vertices; // first element of pair is distance
-    active_vertices.insert( {0,source} );
-        
-    while (!active_vertices.empty()) {
-        int where = active_vertices.begin()->second;
-        if (where == target) return min_distance[where];
-        active_vertices.erase( active_vertices.begin() );
-        for (auto ed : graph[where])
-			// ??? INTEGER OVERFLOW ???
-            if (min_distance[ed.to] > min_distance[where] + ed.length) {
-                active_vertices.erase( { min_distance[ed.to], ed.to } );
-                min_distance[ed.to] = min_distance[where] + ed.length;
-                active_vertices.insert( { min_distance[ed.to], ed.to } );
+
+typedef pair<int, int> iPair;
+
+class Graph
+{
+    int V; // no of vertices
+
+    vector<list<pair<int, int>>> adj;
+
+    vector<int> dijkstra(int from) {
+        priority_queue<iPair, vector<iPair>, greater<iPair>> pq;
+        pq.push(make_pair(0, from));
+        vector<int> dist(V, numeric_limits<int>::max());
+        dist[from] = 0;
+
+        while (!pq.empty()) {
+            int u = pq.top().second;
+            pq.pop(); 
+
+            for (auto i : adj[u]) {
+                int v = i.first;
+                int w = i.second;
+                if (dist[u] + w < dist[v]) {
+                    dist[v] = dist[u] + w;
+                    pq.push(make_pair(dist[v], v));
+                }
             }
+        }
+
+        return dist;
     }
-    return INT_MAX;
-}
+
+public:
+
+    Graph(int V) {
+        this->V = V;
+        for (auto i = 0; i < V; ++i) {
+            adj.push_back(list<pair<int, int>>());
+        }
+    }
+
+    void addEdge(int u, int v, int w) {
+        adj[u].push_back(make_pair(v, w));
+        adj[v].push_back(make_pair(u, w));
+    }
+
+    void printShortestPaths(int from) {
+
+        auto dist = dijkstra(from);
+
+        // Print shortest distances stored in dist[]
+        printf("Vertex   Distance from Source\n");
+        for (int i = 0; i < V; ++i)
+            printf("%d \t\t %d\n", i, dist[i]);
+
+    }
+
+};
+
 
 int main(){
-	
+    
+    int V = 9;
+    Graph g(V);
+ 
+    //  making above shown graph
+    g.addEdge(0, 1, 4);
+    g.addEdge(0, 7, 8);
+    g.addEdge(1, 2, 8);
+    g.addEdge(1, 7, 11);
+    g.addEdge(2, 3, 7);
+    g.addEdge(2, 8, 2);
+    g.addEdge(2, 5, 4);
+    g.addEdge(3, 4, 9);
+    g.addEdge(3, 5, 14);
+    g.addEdge(4, 5, 10);
+    g.addEdge(5, 6, 2);
+    g.addEdge(6, 7, 1);
+    g.addEdge(6, 8, 6);
+    g.addEdge(7, 8, 7);
+ 
+    g.printShortestPaths(0);
+
+
 	return 0;
 }
