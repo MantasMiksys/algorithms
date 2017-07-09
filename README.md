@@ -7,7 +7,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 * [Depth-First Search (DFS)](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/dfs.cpp)
 * [QuickSort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/quicksort.cpp)
 * [MergeSort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/mergesort.cpp)
-* [Dijstra](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/dijkstra.cpp)
+* [Dijkstra](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/dijkstra.cpp)
 
 * [Counting Sort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/counting_sort.cpp)
 * [Eratosthenes Sieve](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/eratosthenes_sieve.cpp)
