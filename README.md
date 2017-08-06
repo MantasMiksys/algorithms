@@ -41,6 +41,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 
 
 ## Famous problems
+* [Longest Common Substring (LCS)](https://github.com/MantasMiksys/algorithms/blob/master/problems/lcs.cpp)
 * Rod cutting (DP)
 * Knapsack (DP)
 * Matrix chain multiplication(DP)
