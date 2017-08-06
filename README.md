@@ -21,7 +21,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 * Ternary search and meet in the middle 
 * Floyd-Warshall
 * Graham-Scan for convex hull, Line sweep
-* Bellman-Ford
+* [Bellman-Ford](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/bellman_ford.cpp)
 * Kruskal's or Prim's
 * Edmonds-Karp
 

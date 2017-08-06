@@ -94,3 +94,31 @@ int main(){
 
 	return 0;
 }
+
+
+/*
+
+vector<int> dijkstra(vector<vector<pair<int, int>>> adj, int from) {
+    vector<int> dist(adj.size(), numeric_limits<int>::max());
+    dist[from] = 0;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    pq.push(make_pair(0, from));
+
+    while (!pq.empty()) {
+        int u = pq.top().second;
+        pq.pop();
+
+        for (auto e : adj[u]) {
+            int v = e.first;
+            int w = e.second;
+
+            if (dist[v] > dist[u] + w) {
+                dist[v] = dist[u] + w;
+                pq.push(make_pair(dist[v], v));
+            }
+        }
+    }
+    return dist;
+}
+
+*/
