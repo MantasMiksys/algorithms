@@ -30,7 +30,7 @@ class MaxHeap {
         }
     }
 
-    void sink(int k) { // TODO understand
+    void sink(int k) {
         int l = left(k);
         int r = right(k);
         int largest = k;
