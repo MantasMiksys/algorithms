@@ -1,36 +1,34 @@
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 
-void counting_sort(vector<int> &v, int max_value){
-	vector<int> counts(max_value, 0);
-	for(int i : v){
-		counts[i-1]++;
+vector<int> counting_sort(const vector<int> & v){
+	int k = *max_element(begin(v), end(v));
+	vector<int> c(k+1, 0);
+	vector<int> b(v.size(), -1);
+
+	for(int e : v)
+		++c[e];
+
+	for(int i = 1; i < c.size(); ++i)
+		c[i] += c[i-1];
+	
+	for(int i = v.size() - 1; i >= 0; --i) {
+		b[c[v[i]]-1] = v[i];
+		--c[v[i]];
 	}
-	int k = 0;
-	for(int i = 0; i < counts.size(); i++){
-		int count = counts[i];
-		cout << count << endl;
-		for(int j = 0; j < count; j++){
-			v[k] = i+1;
-			k++;
-		}
-	}
-	cout << "asda"<< endl;
+	return b;
 }
 
 int main(){
 	cout << "Counting sort" << endl;
 	vector<int> v = {4, 3, 5, 6, 0, 4, 9};
-	cout << v.size() << endl;
-	counting_sort(v, 10);
-	cout << "a" << endl;
-	cout << v.size() << endl;
-	cout << "wtf" << endl;
-	for(auto a : v){
-		cout << a << " ";
+	auto res = counting_sort(v);
+	for(auto e : res){
+		cout << e << " ";
 	}
 	
 	return 0;
