@@ -10,6 +10,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 * HeapSort
 * [Dijkstra](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/dijkstra.cpp)
 
+### Sorting
 * [Counting Sort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/counting_sort.cpp)
 * Radix sort
 * [Eratosthenes Sieve](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/eratosthenes_sieve.cpp)
@@ -24,6 +25,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 * [Bellman-Ford](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/bellman_ford.cpp)
 * Kruskal's or Prim's
 * Edmonds-Karp
+* [Randomized Select](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/randomized_select.cpp)
 
 ## Data structures
 
