@@ -2,12 +2,12 @@
 
 using namespace std;
 
-class GlobalClass {
+class Singleton {
     int m_value = 0;
 
     public:
-        static GlobalClass & getInstance(){
-            static GlobalClass instance;
+        static Singleton & getInstance(){
+            static Singleton instance;
 
             return instance;
         }
@@ -15,13 +15,11 @@ class GlobalClass {
         int getValue() {
             return m_value;
         }
-
 };
-
 
 int main() {
 
-    auto gc = GlobalClass::getInstance();
+    auto gc = Singleton::getInstance();
 
     cout << "value: " << gc.getValue() << endl;
 
