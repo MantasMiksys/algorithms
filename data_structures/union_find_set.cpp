@@ -26,6 +26,8 @@ public:
     void makeUnion(int a, int b) {
         int rootA = root(a);
         int rootB = root(b);
+        if(rootA == rootB)
+            return;
         int largerRoot = (size[rootA] > size[rootB]) ? rootA : rootB;
         int smallerRoot = (size[rootA] <= size[rootB]) ? rootA : rootB;
         arr[smallerRoot] = largerRoot;

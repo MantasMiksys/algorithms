@@ -31,8 +31,6 @@ public:
     }
 
     bool contains(const string & s) {
-        if(head == nullptr) 
-            return false;
         TrieNode * cur = head;
         for(const char & c : s) {
             int i = c - 'a';
