@@ -5,6 +5,8 @@
 
 using namespace std;
 
+// O(VE)
+
 vector<int> bellmanFord(vector<vector<pair<int, int>>> adj, int src) {
     int INF = numeric_limits<int>::max();
     vector<int> dist(adj.size(), INF);

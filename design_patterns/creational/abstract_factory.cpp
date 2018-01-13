@@ -45,7 +45,6 @@ AbstractWidgetFactory * getWidgetFactory(const string & os){
 }
 
 
-
 int main() {
 
     string os = "Windows";

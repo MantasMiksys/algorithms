@@ -1,54 +1,40 @@
-/*
+#include <iostream>
+#include <vector>
+#include <stack>
 
-# time complexity O(V + E)
+using namespace std;
 
-def topological_sort_helper(v, visited, stack):
-    visited[v] = True
+// time complexity O(V + E)
 
-    # for all vertices adjacent to v
-    for i in range(G.V):
-        if G.is_adjacent(v, i) and not visited[i]:
-            topological_sort_helper(i, visited, stack)
-    stack.append(v)
+void topologicalSortUtil(const vector<vector<int>> & adj, vector<bool> & visited, stack<int> & s, int from) {
+    visited[from] = true;
+    for(int n : adj[from]) {
+        if(!visited[n])
+            topologicalSortUtil(adj, visited, s, n);
+    }
+    s.push(from);
+}
 
-def topological_sort():
-    n = G.V
-    visited = [False] * n
+stack<int> topologicalSort(const vector<vector<int>> & adj) {
+    stack<int> s;
+    vector<bool> visited(adj.size(), false);
+    for(int i = 0; i < visited.size(); ++i) {
+        if(!visited[i])
+            topologicalSortUtil(adj, visited, s, i);
+    }
+    return s;
+}
 
-    stack = []
-
-    for i in range(n):
-        if not visited[i]:
-            topological_sort_helper(i, visited, stack)
-
-    for v in range(n):
-        print(stack.pop())
-
-
-
-class Graph:
-    V = 0
-    adj = [] # adjencency matrix
-
-    def __init__(self, V):
-        self.V = V
-        self.adj = [[0] * V for _ in range(V)]
-
-    def add_edge(self, v, e):
-        self.adj[v][e] = 1
-
-    def is_adjacent(self, v, e):
-        return self.adj[v][e]
-
-G = Graph(6)
-G.add_edge(5, 2)
-G.add_edge(5, 0)
-G.add_edge(4, 0)
-G.add_edge(4, 1)
-G.add_edge(2, 3)
-G.add_edge(3, 1)
-
-topological_sort()
-        
-    
-*/
+int main() {
+    vector<vector<int>> adj(6);
+    adj[5].insert(adj[5].end(), {0, 2});
+    adj[4].insert(adj[4].end(), {0, 1});
+    adj[2].push_back(3);
+    adj[3].push_back(1);
+    stack<int> s = topologicalSort(adj);
+    while(!s.empty()) {
+        cout << s.top() << " ";
+        s.pop();
+    }
+    cout << endl;
+}
