@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <set>
+#include <queue>
 
 using namespace std;
 
@@ -37,6 +37,30 @@ vector<int> primMST(const vector<vector<int>> & adj) {
     return parent;
 }
 
+typedef tuple<int, int, int> iPair;
+
+vector<int> primPQ(const vector<vector<int>> & adj) {
+    priority_queue<iPair, vector<iPair>, greater<iPair>> pq;
+    vector<bool> marked(adj.size());
+    vector<int> parent(adj.size());
+    pq.push(make_tuple(0, 0, -1));
+    while(!pq.empty()) {
+        auto p = pq.top();
+        pq.pop();
+        int u = get<1>(p);
+        if(marked[u]) // checking for a cycle
+            continue;
+        marked[u] = true;
+        parent[u] = get<2>(p);
+        for(int i = 0; i < adj.size(); ++i) {
+            if(adj[u][i] && !marked[i]) {
+                pq.push(make_tuple(adj[u][i], i, u));
+            }
+        }
+    }
+    return parent;
+}
+
 void printMST(const vector<int> & parent, const vector<vector<int>> & adj)
 {
    printf("Edge   Weight\n");
@@ -52,7 +76,7 @@ int main() {
                     {6, 8, 0, 0, 9},
                     {0, 5, 7, 9, 0},
                     };
-    auto res = primMST(adj);
+    auto res = primPQ(adj);
     printMST(res, adj);
  
 }
