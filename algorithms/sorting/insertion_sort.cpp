@@ -9,7 +9,7 @@ void insertionSort(vector<int> & v) {
     for(int i = 1; i < v.size(); ++i){
         int e = v[i];
         int j = i - 1;
-        while(j > 0 && v[j] > e){
+        while(j >= 0 && v[j] > e){
             v[j+1] = v[j];
             --j;
         }
