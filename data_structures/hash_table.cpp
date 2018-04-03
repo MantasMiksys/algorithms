@@ -67,7 +67,7 @@ public:
         size_t h = getHash(key);
         HashNode<K,V> * prev = nullptr;
         HashNode<K,V> * entry = table[h];
-        while(entry!=nullptr) {
+        while(entry!=nullptr && entry->key != key) {
             prev = entry;
             entry = entry->next;
         }

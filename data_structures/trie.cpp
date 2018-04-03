@@ -38,7 +38,7 @@ public:
                 return false;
             cur = cur->children[i];
         }
-        return cur->isEndOfWord;
+        return cur!=nullptr && cur->isEndOfWord;
     }
 };
 
