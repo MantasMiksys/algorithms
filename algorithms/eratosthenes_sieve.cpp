@@ -12,12 +12,11 @@ vector<bool> sieve (int n)
 
     for (auto i = 0; i < sqrt(n); ++i) {
         if (prime[i]) {
-            for (auto j = i * i; j < n; j+=i) {
+            for (auto j = i * 2; j < n; j+=i) {
                 prime[j] = false;
             }
         }
     }
-
 
     return prime;
 }
