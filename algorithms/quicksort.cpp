@@ -10,7 +10,7 @@ Average case O(n log(n))
 Why is Quick Sort preferred over MergeSort?
 1) It's an in-place sort (no extra storage).
 Allocating and de-allocating extra space would increase the running time
-2) It's also a cache freindly algorith as it has good locality of reference
+2) It's also a cache friendly algorith as it has good locality of reference
 when used for arrays.
 3) QuickSort is also tail recursive, therefore tail call optimization is done
 - Quick Sort (same as Heap Sort) is not stable, while Merge Sort, Bubble Sort,
@@ -20,7 +20,7 @@ and Insertion Sort are stable.
 What about for lists?
 - For lists merge operation of Merge Sort can be implemented without extra space
 for linked lists.
-- Unlike arrays, we cannot do random access in liked lists. Quick Sort requires
+- Unlike arrays, we cannot do random access in linked lists. Quick Sort requires
 a lot of this kind of access. Therefore, the overhead increases for Quick Sort.
 Merge Sort accesses data sequentially and the need for random access is low.
 
