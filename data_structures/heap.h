@@ -16,7 +16,7 @@ class MaxHeap {
     }
 
     int right(int i) {
-        return 2 * 1 + 2;
+        return 2 * i + 2;
     }
 
     int parent(int i) {
@@ -42,7 +42,7 @@ class MaxHeap {
         } 
         if (largest != k) {
             swap(pq[k], pq[largest]);
-            sink(k);
+            sink(largest);
         }
     }
 
