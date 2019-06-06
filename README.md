@@ -9,7 +9,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 * [Eratosthenes Sieve](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/eratosthenes_sieve.cpp)
 * [Changing bases](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/bases.cpp)
 
-* Topological sort
+* [Topological sort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/topological_sort.cpp)
 * Logarithmic exponentiation
 
 * Ternary search and meet in the middle 
