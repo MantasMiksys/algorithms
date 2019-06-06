@@ -36,7 +36,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 * [Binary Heap](https://github.com/MantasMiksys/algorithms/blob/master/heap.h)
 * [Double Linked List](https://github.com/MantasMiksys/algorithms/blob/master/double_linked_list.h)
 * Hash Table
-* Trie
+* [Trie](https://github.com/MantasMiksys/algorithms/blob/master/data_structures/trie.cpp)
 * Bit Set
 * Interval Tree
 
