@@ -16,7 +16,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 * Floyd-Warshall
 * Graham-Scan for convex hull, Line sweep
 * [Bellman-Ford](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/bellman_ford.cpp)
-* Kruskal's or Prim's
+* [Prim's](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/prims.cpp)
 * Edmonds-Karp
 * [Randomized Select](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/randomized_select.cpp)
 
