@@ -13,7 +13,7 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 * Logarithmic exponentiation
 
 * Ternary search and meet in the middle 
-* Floyd-Warshall
+* [Floyd-Warshall](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/floyd_warshall.cpp)
 * Graham-Scan for convex hull, Line sweep
 * [Bellman-Ford](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/bellman_ford.cpp)
 * [Prim's](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/prims.cpp)
@@ -35,12 +35,11 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 * [Binary Search Tree (BST)](https://github.com/MantasMiksys/algorithms/blob/master/bst.h)
 * [Binary Heap](https://github.com/MantasMiksys/algorithms/blob/master/heap.h)
 * [Double Linked List](https://github.com/MantasMiksys/algorithms/blob/master/double_linked_list.h)
-* Hash Table
+* [Hash Table](https://github.com/MantasMiksys/algorithms/blob/master/data_structures/hash_table.cpp)
 * [Trie](https://github.com/MantasMiksys/algorithms/blob/master/data_structures/trie.cpp)
 * Bit Set
 * Interval Tree
-
-* Union Find 
+* [Union Find](https://github.com/MantasMiksys/algorithms/blob/master/data_structures/union_find_set.h)
 * Segment trees
 * Suffix arrays
 
