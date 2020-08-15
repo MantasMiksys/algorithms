@@ -23,8 +23,8 @@ Implementation of standard algorthms and data structures in C++. Based on Algori
 ### Sorting
 * [Counting Sort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/counting_sort.cpp)
 * Radix sort
-* [QuickSort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/quicksort.cpp)
-* [MergeSort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/mergesort.cpp)
+* [QuickSort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/sorting/quicksort.cpp)
+* [MergeSort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/sorting/merge_sort.cpp)
 * [HeapSort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/sorting/heap_sort.cpp)
 * [Insertion Sort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/sorting/insertion_sort.cpp)
 * [Selection Sort](https://github.com/MantasMiksys/algorithms/blob/master/algorithms/sorting/selection_sort.cpp)
